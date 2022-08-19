@@ -8,25 +8,16 @@
 var1="bad luck from China"
 var2="bad luck from Japan"
 var3="bad luck from Italy"
-a=1
 
-while [[ $a -le 20 ]]
+count=1
+
+while [ $count -le 20 ]
 do
-	if [[ $a -eq 4 ]]
-	then
-		echo "4"
-		echo "$var1"
-    	elif [[ $a -eq 9 ]]
-    	then
-		echo "9"
-        	echo "$var2"
-    	elif [[ $a -eq 17 ]]
-    	then
-        	echo "17"
-		echo "$var3"
-	else
-		echo "$a"
-    	fi
-   
-	(( a++ ))
+  echo "$count"
+  case $count in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
+  (( count++ ))
 done
