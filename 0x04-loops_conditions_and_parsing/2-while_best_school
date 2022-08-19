@@ -1,10 +1,10 @@
 #!/bin/bash/env bash
 #This script is dispalaying "Best School" 10 times using while Loop
 
-a=1
+index=0
 
-while [ $a -le 10 ]
+while [ $index -lt 10 ]
 do
   echo "Best School"
-  ((a++))
+  ((index++))
 done
