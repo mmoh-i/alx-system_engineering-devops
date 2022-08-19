@@ -1,0 +1,12 @@
+#!/bin/bash/env bash
+#This script is dispalaying "Best School" 10 times using while Loop
+
+a=1
+b=10
+var="Best School"
+
+while [[ $a -le $b ]]
+do
+    echo "$var"
+    (( a++ ))
+done
