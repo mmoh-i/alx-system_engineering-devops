@@ -5,7 +5,7 @@ a=1
 b=10
 var="Best School"
 
-while [[ $a -le $b ]]
+while [ $a -le $b ]
 do
     echo "$var"
     (( a++ ))
