@@ -3,4 +3,5 @@
 
 for (( c=1; c<=10; c++ ))
 do
-    ech
+    echo "Best School"
+done
