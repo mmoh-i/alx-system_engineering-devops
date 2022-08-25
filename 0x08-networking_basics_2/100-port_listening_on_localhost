@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script creating port 98 connection to local host
+
+nc -l localhost 98
