@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-19T03:26:45.682Z" agent="5.0 (X11)" etag="QcIGZtXDm4fajN-IkS9a" version="20.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-19T03:30:40.602Z" agent="5.0 (X11)" etag="lJTKHAQbCFoNp2sR5Pb0" version="20.3.2" type="github">
   <diagram name="Page-1" id="55a83fd1-7818-8e21-69c5-c3457e3827bb">
     <mxGraphModel dx="1422" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -75,6 +75,12 @@
             <mxPoint x="375.5" y="388" as="sourcePoint" />
             <mxPoint x="382.5" y="408" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="cRlTSrXUvNww42stDikP-22" value="Server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="525" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cRlTSrXUvNww42stDikP-23" value="&lt;div&gt;Router&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="206" y="385" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
