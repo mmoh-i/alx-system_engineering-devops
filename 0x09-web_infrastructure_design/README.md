@@ -1,18 +1,15 @@
 0x09. Web infrastructure design<br/>
 
 
-| Requirements       |  Link              |
-|  ---               |  ---               |
-|  server            |                    |
-| 1 web server(Nginx)|                    |
-| 1 plication server |                    |
-| 1 application files|                    |
-| (your code base)   |                    |
-| 1 database (MySQL) | 0.simple web stack](0x09-web_infrastructure_design/0-simple_web_stack)|              
-|  domain name       |                    |
-| foobar.com with    |                    | 
-| IP: 8.8.8.8        |                    |
-
+| Requirements  | Link  |
+| ---           | ---   |
+|   1 server
+    1 web server (Nginx)
+    1 application server
+    1 application files (your code base)
+    1 database (MySQL)
+    1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8 | [0-simple_web_stack](../0-simple_web_stack)   |
+    
 **What is a server**
  web server is a system which is capable of interpereting web cotent to end users on the internet.
  
