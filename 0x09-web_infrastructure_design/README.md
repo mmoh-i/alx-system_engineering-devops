@@ -3,7 +3,7 @@
 
 | Requirements                                                  | Link  |
 | ---                                                           | ---   |
-|   1 server                                                    | [0-simple_web_stack](../0-simple_web_stack)   |
+|   1 server                                                    | [0-simple_web_stack](..//https://github.com/mmoh-i/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design0-simple_web_stack)   |
     1 web server (Nginx)
     1 application server
     1 application files (your code base)
