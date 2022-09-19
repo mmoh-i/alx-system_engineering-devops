@@ -3,8 +3,8 @@
 ### [0x09. Web infrastructure design](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/)<br/>       
 
 [0-simple_web_stack](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack)
-Requirements  |  link  |
-| --- | --- |
+|Requirements|  
+| --- | 
 | 1 servers|
 | 1 web server(Nginx)|
 | 1 application server|
@@ -34,8 +34,8 @@ Requirements  |  link  |
 
 
 ## [1-distributed_web_infrastructure](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure)
-|Requirements  |  link  |
-| --- | --- |
+|Requirements  |
+| --- |
 | 2 servers|
 | 1 web server(Nginx)|
 | 1 application server|
@@ -65,6 +65,12 @@ Requirements  |  link  |
 
 ## [2-secured_and_monitored_web_infrastructure](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/2-secured_and_monitored_web_infrastructure)
 
+|Requirements  |
+| --- |
+| 3 firewalls|
+| 1 SSL certificate to serve www.foorbar.com ober HTTPs|
+| 3 monitoring cleintss (data collector for Sumologic or the other monitoring services)|
+
 - **what is a Firewall**
 <p>firewall is a server component that is defensive  and tends to fiter traffic especially from unsecured networks to prevent attacks on the server.</p>
 
@@ -76,3 +82,13 @@ Requirements  |  link  |
 
 - **ways a monitoring tools collect data**
 <p>monitoring collects data from the trequest sent to the server and the https contents and the TTL (time to leave) which generate a dashborad showing the server state status to the IT administrator </p>
+ mo
+**what to do to monitor QPS**
+<p> Queries-per-second is a meteric measuremnent of how mucha queries a server recieved per seconds monitoring will be best applied using the time analysis graph which if analysed with a scripting language like python can be easily visualized by their seconds and changes monitor</p>
+
+|Requiremenes |
+| 1 server|
+| 1 load-balancer (HAproxy) cofigured as cluster with the other one|
+| Split components (web server, application server, database) with thier own server|
+
+<p> the
