@@ -1,10 +1,16 @@
-##ALX WEB INFRASTRUCTURE DESGN 
-**AUHOR:** https://img.shields.io/twitter/follow/MI_Musty?style=social
+##ALX WEB INFRASTRUCTURE DESGN<br/>
+**AUHOR:** https://img.shields.io/twitter/follow/MI_Musty?style=social<br/>
 ###0x09. Web infrastructure design<br/>       
 
-[0-simple_web_stack](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack)
-
-
+[0-simple_web_stack](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/)
+Requirements  |  link  |
+| --- | --- |
+| 1 servers|
+| 1 web server(Nginx)|
+| 1 application server|
+| 1 set of application files(code base)|
+| 1 database(MySQL)|
+| 1 domain name foobar.com configured with record that points to server IP: 8.8.8.8|
 
 
 **What is a server**
@@ -55,3 +61,5 @@
 
  **difference between the Primary node and the Replica node in regard to the application**
 <p></p>
+
+[]
