@@ -3,12 +3,12 @@
 
 | Requirements                                                  | Link  |
 | ---                                                           | ---   |
-|   1 server                                                    | [0-simple_web_stack](../0x09-web_infrastructure_design/0-simple_web_stack)   |
+|   1 server                                                    
     1 web server (Nginx)
     1 application server
     1 application files (your code base)
     1 database (MySQL)
-    1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8 
+    1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8 |  |
     
 **What is a server**
  web server is a system which is capable of interpereting web cotent to end users on the internet.
