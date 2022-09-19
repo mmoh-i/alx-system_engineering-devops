@@ -1,6 +1,6 @@
-##ALX WEB INFRASTRUCTURE DESGN<br/>
+## ALX WEB INFRASTRUCTURE DESGN<br/>
 **AUHOR:** https://img.shields.io/twitter/follow/MI_Musty?style=social<br/>
-###0x09. Web infrastructure design<br/>       
+### 0x09. Web infrastructure design<br/>       
 
 [0-simple_web_stack](https://github.com/mmoh-i/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/)
 Requirements  |  link  |
