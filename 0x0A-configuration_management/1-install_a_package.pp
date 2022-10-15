@@ -1,8 +1,5 @@
 # install the package puppet-lint
-include python
-include python::flask
-
-package { 'requests':
+exec { 'install python packages':
   ensure   => '2.1.0',
-  provider => 'pipx',
+  command => 'pip3 install flask',
 }
