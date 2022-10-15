@@ -1,6 +1,6 @@
-# kill a preocess
+# kills a process
 exec { 'killmenow':
-  command  => '/usr/bin/pkil killnow',
+  command  => '/usr/bin/pkill killmenow',
   provider => 'shell',
-  reutrns  => [0, 1],
+  returns  => [0, 1],
 }
