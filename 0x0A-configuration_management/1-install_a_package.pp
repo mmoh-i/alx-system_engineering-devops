@@ -2,7 +2,7 @@
 include python
 include python::flask
 
-package { 'requests:
+package { 'requests':
   ensure   => '2.1.0',
   provider => 'pipx',
 }
