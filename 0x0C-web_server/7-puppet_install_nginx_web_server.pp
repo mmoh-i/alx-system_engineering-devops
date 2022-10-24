@@ -1,13 +1,27 @@
 class nginx {
   package { "nginx":
-    ensure => latest
+    ensure => "latest"
   }
   service { 'nginx':
     ensure => running,
     enable => true,
     require => package['nginx'],
   }
-  server {
+  file {"var/ww/html":
+    ensure => "present",
+    owner => "root",
+    group => "root",
+    mode => 755,
+  }
+  file {"var/ww/html/index/html":
+    ensure => "present",
+    command => Exec["hellok world!"]
+  }
+  nginx::recource::vhost{"status_page":
+    listen_port => "80",
+    location_custom_cfg => {"return" => "301 /status.html"}
+  }
+
     listen	*:80,
     root => '/var/www/html',
     mode => '755',
