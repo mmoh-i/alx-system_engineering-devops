@@ -8,7 +8,7 @@ sudo apt-get install -y haproxy=2.4.\*
 
 echo \
 	"
-front location localnodes
+frontend localnodes
 	bind *:80
 	mode http
 	default_backend nodes
