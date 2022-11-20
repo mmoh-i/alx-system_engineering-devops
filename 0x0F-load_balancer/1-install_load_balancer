@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#Configure a load-balancing server
+
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo apt-get-repository -y ppa:vbernat/haproxy-2.4
+sudo apt-get update -y
+sudo apt-get install -y haproxy=2.4.\*
+
+echo \
+	"
+front location localnodes
+	bind *:80
+	mode http
+	default_backend nodes
+backend nodes
+	node http
+	balance roundrobin
+	server 43710-web-01 44.211.98.134
+	server 43710-web-02 54.160.76.54" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart 
