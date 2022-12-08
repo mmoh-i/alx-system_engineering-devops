@@ -1,3 +1,4 @@
+# puppet fix for nginx site srver to hndle multiple concurrent  requests.
 exec { 'fix--for-nginx':
   command => "bash -c \"sed -iE 's/^ULIMIT=.*/ULIMIT=\\\"-n 8192\\\"/' \
 /etc/default/nginx; service nginx restart\"",
