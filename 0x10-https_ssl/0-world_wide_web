@@ -1,33 +1,44 @@
 #!/usr/bin/env bash
-# Bash script that will display information about subdomains
+# configure your domain zone so that the subdomain www points to your load-balancer IP (lb-01). Let’s also add other subdomains to make our life easier, and write a Bash script that will display information about subdomains.
 
-SUB1="www"
-SUB2="lb-01"
-SUB3="web-01"
-SUB4="web-02"
+# Requirements:
 
-my_digger ()
-{
-    if [ ! -z "$1" ] && [ -z "$2" ]; then
-        myvar_a1="The subdomain $SUB1 is a "
-        myvar_a2=$(dig $SUB1.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4 " record and points to " $5}')
-        myvar_b1="The subdomain $SUB2 is a "
-        myvar_b2=$(dig $SUB2.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4 " record and points to " $5}')
-        myvar_c1="The subdomain $SUB3 is a "
-        myvar_c2=$(dig $SUB3.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4 " record and points to " $5}')
-        myvar_d1="The subdomain $SUB4 is a "
-        myvar_d2=$(dig $SUB4.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4 " record and points to " $5}')
+# Add the subdomain www to your domain, point it to your lb-01 IP (your domain name might be configured with default subdomains, feel free to remove them)
+# Add the subdomain lb-01 to your domain, point it to your lb-01 IP
+# Add the subdomain web-01 to your domain, point it to your web-01 IP
+# Add the subdomain web-02 to your domain, point it to your web-02 IP
+# Your Bash script must accept 2 arguments:
+# domain:
+# type: string
+# what: domain name to audit
+# mandatory: yes
+# subdomain:
+# type: string
+# what: specific subdomain to audit
+# mandatory: no
+num=$#
+func () {
+	if (( num < 2 ))
+	then
+		domain_list=("www" "lb-01" "web-01" "web-02")
+		for i in "${domain_list[@]}"
+		do
+			domain=$i.$1
 
-        echo "$myvar_a1$myvar_a2"
-        echo "$myvar_b1$myvar_b2"
-        echo "$myvar_c1$myvar_c2"
-        echo "$myvar_d1$myvar_d2"
-
-    elif [ ! -z "$1" ] && [ ! -z "$2" ]; then
-        myvar1="The subdomain $2 is a "
-        myvar2=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print $4 " record and points to " $5}')
-        echo "$myvar1$myvar2"
-    fi
+			info=$(dig $domain)
+			subdomain=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{split($0, a, "."); print a[1]}') 
+			record=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}')
+			ip=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+			echo "The subdomain $subdomain is a $record record and points to $ip"
+		done
+	else
+		domain=$2.$1
+		info=$(dig $domain)
+		subdomain=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{split($0, a, "."); print a[1]}')
+		record=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $4}')
+		ip=$(echo "$info" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print $5}')
+		echo "The subdomain $subdomain is a $record record and points to $ip"
+	fi
 }
 
-my_digger "$1" "$2"
+func "$1" "$2
